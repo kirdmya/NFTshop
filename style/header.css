@@ -1,9 +1,18 @@
 .header-container, 
 .logo, .logo-name,
-.nav-menu {
+.nav-menu,
+.shop-nav-auth {
     display: flex;
 }
 
+.nav-list a:hover {
+    color: white
+}
+
+.nav-list a.active{
+    border-bottom: 2px dashed #f2eded;
+    padding-bottom: 3px;
+}
 
 .header-container {
     height: 80px;
@@ -48,13 +57,33 @@
     font-size: 23px;
 }
 
-@media (max-width: 1800px) {
+.shop-nav-auth {
+    width: 20%;
+}
+
+.circle-cart {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #444040;
+    text-align: center;
+
+}
+
+.circle-cart img {
+    width: 40px;
+    height: 40px;
+    margin-top:  12px;
+}
+
+@media (max-width: 1900px) {
 	.header-container, .logo-name {
         flex-direction: column;
     }
 
     .header-container {
-        height: 270px;
+        height: 350px;
     }
 
     .logo img {
@@ -66,5 +95,10 @@
     .logo-name {
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    .shop-nav-auth {
+        width: 100%;
+        margin: 20px 0;
     }
 }
