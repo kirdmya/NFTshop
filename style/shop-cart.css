@@ -5,10 +5,9 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,0.5); 
-    /*z-index: 1050;*/
-    opacity: 0; /* по умолчанию модальное окно прозрачно */
-    pointer-events: none; /* элемент невидим для событий мыши */
+    background: rgba(0,0,0,.7); 
+    opacity: 0; 
+    pointer-events: none;
     margin: 0;
     padding: 0;
 }
@@ -24,11 +23,12 @@
     width: auto;
     margin: 10px;
 }
+
 @media (min-width: 576px) {
-  .modal-dialog {
-      max-width: 500px;
-      margin: 30px auto; /* для отображения модального окна по центру */
-  }
+    .modal-dialog {
+        max-width: 500px;
+        margin: 60px auto; /* для отображения модального окна по центру */
+    }
 }
 
 .modal-content {
@@ -36,25 +36,15 @@
     display: flex;
     flex-direction: column;
     background-color: #fff;
-   /* -webkit-background-clip: padding-box;
-    background-clip: padding-box;*/
-    border: 1px solid rgba(0,0,0,.2);
-   /* border-radius: .3rem;
-    outline: 0;*/
+    border: 1px solid rgba(0,0,0);
 }
-/*@media (min-width: 768px) {
-  .modal-content {
-      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
-      box-shadow: 0 5px 15px rgba(0,0,0,.5);
-  }
-}*/
 
 .modal-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
-    border-bottom: 1px solid #eceeef;
+    padding: 18px;
+    border-bottom: 1px solid #dbdedf;
 }
 
 .modal-title {
@@ -75,18 +65,32 @@
     opacity: .5;
     text-decoration: none;
 }
-/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+
 .close:focus, .close:hover {
     color: #000;
     text-decoration: none;
     cursor: pointer;
     opacity: .75;
 }
-/* свойства для блока, содержащего основное содержимое окна */
+
 .modal-body {
     position: relative;
     flex: 1 1 auto;
-    padding: 15px;
+    padding: 18px;
     overflow: auto;
-    color: #000;
 }
+
+.control-label {
+    color: rgb(102, 101, 101);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.control-form {
+    border-radius: 10px;
+    border: 1px solid rgb(201, 199, 199);
+}
+
+.control-form:hover {
+    border: 1px solid rgb(129, 129, 129);
+  }
